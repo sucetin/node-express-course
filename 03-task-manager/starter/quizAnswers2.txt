@@ -1,0 +1,11 @@
+1. In our controllers we had repetitations with try and catch blocks. Asyncwrapper 
+basically helped us to clean up the clutter in the code.
+
+2.const getTask = asyncWrapper(async (req, res, next) => {
+    const {id: taskID} = req.params
+    const task = await Task.findOne({ _id: taskID })
+    if (!task){
+       return next(createCustomError("Not found!", 404));
+    }
+    res.status(200).json({ task })
+}) 
