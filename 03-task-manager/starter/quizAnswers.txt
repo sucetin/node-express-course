@@ -1,0 +1,4 @@
+1. Middleware is a function which we can evoke before we get the results for an API operation.
+2. Create, Read, Update, and Delete
+3.  a.process.env.KEY_NAME 
+    b.I add them in .gitignore file
